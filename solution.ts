@@ -35,3 +35,8 @@ type RatingInput = { title: string; rating: number }[];
 const filterByRating = (items: RatingInput): RatingInput => {
   return items.filter((item) => item.rating >= 4);
 };
+
+type Users = { id: number; name: string; email: string; isActive: boolean }[];
+const filterActiveUsers = (users: Users): Users => {
+  return users.filter((user) => user.isActive);
+};
