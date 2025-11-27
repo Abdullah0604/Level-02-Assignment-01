@@ -26,7 +26,12 @@ class Person {
     this.age = age;
   }
 
-  getDetails() {
+  getDetails(): string {
     return `"Name: ${this.name}, Age: ${this.age}"`;
   }
 }
+
+type RatingInput = { title: string; rating: number }[];
+const filterByRating = (items: RatingInput): RatingInput => {
+  return items.filter((item) => item.rating >= 4);
+};
