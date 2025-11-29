@@ -11,15 +11,15 @@
         plublished: number;
         price : number;
         isAuthorized: boolean
-    }
+    }<br>
     <!-- interface for array -->
     interface Books {
         [index: number]: string;
-    }
+    }<br>
     <!-- interface for function -->
     interface getBookName {
         (book: {name: string; price: number}): string;
-    }
+    }<br>
     অন্যদিকে type alias এর মাধ্যমে আমরা খুব সহজে যেকোনো value এর টাইপ ডিফাইন করতে পারি। যেমনঃ 
     type Role = "Admin" | "User" <!-- literal type-->
     type Books = {name: string; price: number}
@@ -27,18 +27,18 @@
     type Loading = boolean
     <br>
     <p>
-    2. interface এর মাধ্যমে আমরা খুব সহজে অন্য একটা টাইপ কে extends করতে পারি। কিন্তু type alias এ আমরা extends use করতে পারি না। তবে intersaction or union ব্যবহার করা যায়। যেমনঃ 
+    2. interface এর মাধ্যমে আমরা খুব সহজে অন্য একটা টাইপ কে extends করতে পারি। কিন্তু type alias এ আমরা extends use করতে পারি না। তবে intersaction or union ব্যবহার করা যায়। যেমনঃ <br>
     <!-- example for interface -->
     interface Book {
         name: string
-    }
+    }<br>
     interface BookDetails extends Book {
         price: number
-    }
+    }<br>
     <!-- example for type alias -->
-    type Book = {name: string}
+    type Book = {name: string}<br>
     type BookDetails = Book & {price: number}
 </p>
- </p>
+</p>
 
 <hr>
