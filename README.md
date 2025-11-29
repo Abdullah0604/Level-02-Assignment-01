@@ -1,6 +1,6 @@
-### 1. What are some differences between interfaces and types in TypeScript? <br><br>
+# 1. What are some differences between interfaces and types in TypeScript? <br>
 
-## TypeScript-এ interface এবং type দুটোই object এর structure define করার জন্য ব্যবহার করা হয়। কিন্তু কিছু গুরুত্বপূর্ণ পার্থক্য আছে। নিচে type interface and type alias এর পার্থক্য উদাহরণ সহ দেওয়া হলোঃ
+# TypeScript-এ interface এবং type দুটোই object এর structure define করার জন্য ব্যবহার করা হয়। কিন্তু কিছু গুরুত্বপূর্ণ পার্থক্য আছে। নিচে type interface and type alias এর পার্থক্য উদাহরণ সহ দেওয়া হলোঃ
 
 <br>
  <p>
@@ -26,6 +26,7 @@
     type BookList = string[]
     type Loading = boolean
     <br>
+    <p>
     2. interface এর মাধ্যমে আমরা খুব সহজে অন্য একটা টাইপ কে extends করতে পারি। কিন্তু type alias এ আমরা extends use করতে পারি না। তবে intersaction or union ব্যবহার করা যায়। যেমনঃ 
     <!-- example for interface -->
     interface Book {
@@ -37,6 +38,7 @@
     <!-- example for type alias -->
     type Book = {name: string}
     type BookDetails = Book & {price: number}
+</p>
  </p>
 
 <hr>
