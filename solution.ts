@@ -41,16 +41,6 @@ const filterByRating = (items: RatingInput): RatingInput => {
     }
   });
 };
-const books = [
-  { title: "Book A", rating: 4.5 },
-  { title: "Book B", rating: 3.2 },
-  { title: "Book B", rating: 0 },
-  { title: "Book C", rating: 5.0 },
-  { title: "Book C", rating: 4.0 },
-  { title: "Book C", rating: 6.0 },
-];
-
-console.log(filterByRating(books));
 
 type Users = { id: number; name: string; email: string; isActive: boolean }[];
 const filterActiveUsers = (users: Users): Users => {
