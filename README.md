@@ -1,6 +1,6 @@
 # 1. What are some differences between interfaces and types in TypeScript? <br>
 
-# TypeScript-এ interface এবং type দুটোই object এর structure define করার জন্য ব্যবহার করা হয়। কিন্তু কিছু গুরুত্বপূর্ণ পার্থক্য আছে। নিচে type interface and type alias এর পার্থক্য উদাহরণ সহ দেওয়া হলোঃ
+## TypeScript-এ interface এবং type দুটোই object এর structure define করার জন্য ব্যবহার করা হয়। কিন্তু কিছু গুরুত্বপূর্ণ পার্থক্য আছে। নিচে type interface and type alias এর পার্থক্য উদাহরণ সহ দেওয়া হলোঃ
 
 <br>
  <p>
@@ -19,10 +19,10 @@
     <!-- interface for function -->
     interface getBookName {
         (book: {name: string; price: number}): string;
-    }<br>
+    }<br><br>
     অন্যদিকে type alias এর মাধ্যমে আমরা খুব সহজে যেকোনো value এর টাইপ ডিফাইন করতে পারি। যেমনঃ 
-    type Role = "Admin" | "User" <!-- literal type-->
-    type Books = {name: string; price: number}
+    type Role = "Admin" | "User" <!-- literal type--><br>
+    type Books = {name: string; price: number}<br>
     type BookList = string[]
     type Loading = boolean
     <br>
@@ -40,5 +40,19 @@
     type BookDetails = Book & {price: number}
 </p>
 </p>
-
 <hr>
+
+# 2. What is the use of the keyof keyword in TypeScript? Provide an example. <br>
+
+<p> TypeScript শেখার সময় একটি গুরুত্বপূর্ণ operator হলো keyof। এটি একটি object type-এর সব property কে union type হিসেবে বের করার জন্য ব্যবহার করা হয়। keyof এর সাহায্যে আমরা যেকোনো object-এর সকল key কে  type হিসেবে পেতে পারি। এটি মূলত type-safe code লিখতে সাহায্য করে এবং ভুল key ব্যবহারের সম্ভাবনা কমায়। তাছাড়া, keyof operator, Generic function তৈরিতে সাহায্য করে এবং
+Code maintainable ও bug-free করে। নিচে উদাহরণ দেওয়া হলোঃ <br>
+
+interface User {
+name: string;
+age: number;
+email: string;
+} <br>
+type UserKeys = keyof User;
+এখন এখানে UserKeys এর মধ্যে টাইপ হবে, type UserKeys = 'name' | 'age' | 'email'
+
+</p>
